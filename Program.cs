@@ -7,12 +7,8 @@ namespace Patterns
     {
         static void Main(string[] args)
         {
-           var htmlTree = new HtmlBuilder("ul");
-           htmlTree.AddChild("li","Text").AddChild("li","Hello").AddChild("li","World");
-           System.Console.WriteLine(htmlTree.ToString());
-
-           var pers = Person.New.Called("Lol").WorksAs("Test").Build();
-           System.Console.WriteLine(pers);
+          var cb = new ClassBuilder("Person").AddField("Name","string").AddField("Age","int");
+          System.Console.WriteLine(cb);
         }
     }
 }
